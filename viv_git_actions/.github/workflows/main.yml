@@ -1,0 +1,25 @@
+name: Check 1
+
+on:
+  pull_request_review:
+    types: [submitted]
+    branches:
+      - main
+
+jobs:
+  dbt-test:
+    if: ${{ github.event.review.state == 'approved' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: dbt-action (deps)
+        uses: mwhitaker/dbt-action@master
+        with:
+          dbt_command: "dbt deps --profiles-dir ."
+
+      - name: dbt-action (test)
+        uses: mwhitaker/dbt-action@master
+        with:
+          dbt_command: "dbt test --profiles-dir ."
