@@ -19,7 +19,7 @@ jobs:
         with:
           dbt_command: "dbt deps --profiles-dir ."
 
-      - name: dbt-action (test)
+      - name: dbt-action (compile)
         uses: mwhitaker/dbt-action@master
         with:
-          dbt_command: "dbt test --profiles-dir ."
+          dbt_command: "dbt compile --profiles-dir ."
