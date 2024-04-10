@@ -1,6 +1,6 @@
-# SFO Air Traffic Analytics Data Pipeline
+# Json to Structured Data Pipeline Project
 
-Welcome to our SFO Air Traffic Analytics Data Pipeline project! In this repository, we have developed a robust and automated data pipeline to extract, load, transform, and analyze air traffic statistics from San Francisco International Airport (SFO) datasets. Our approach emphasizes leveraging cloud-native, cost-effective, and serverless technologies to efficiently process and model data for analytical purposes.
+Welcome to our Json to Structured Data Pipeline Project! In this repository, we have developed a robust and automated data pipeline to extract, load, transform, and analyze air traffic statistics from San Francisco International Airport (SFO) datasets. Our approach emphasizes leveraging cloud-native, cost-effective, and serverless technologies to efficiently process and model data for analytical purposes.
 
 ## High-Level Objective
 
@@ -62,5 +62,8 @@ We have implemented CI/CD workflows using GitHub Actions, with two main workflow
 ## Resources
 
 You can find all the necessary resources in this repository, including Lambda functions, Snowflake SQL code for pipes, external integrations, dbt project files, Lambda functions, and GitHub action files. Feel free to explore and utilize these resources as needed.
+### Notes To Remember 
+
+ feel free to replace the parameter values in workflow2.yml file to your liking but make sure to change the image tag of docker image according to your AWS ECR repository name cause the image tag should look like this **repository_name:latest** you can find this line of code in line 66 of the workflow2.yml file 
 
 For any inquiries or contributions, please don't hesitate to reach out. Happy analyzing!
