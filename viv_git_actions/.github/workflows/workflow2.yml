@@ -91,7 +91,6 @@ jobs:
             --template-body file://./aws_templates/ecs.yml \
             --parameters \
             ParameterKey=ClusterName,ParameterValue=abx \
-            ParameterKey=TaskDefinitionFamily,ParameterValue=vk_taskdef \
             ParameterKey=RoleName,ParameterValue=vk_ecs_role \
             ParameterKey=RepositoryName,ParameterValue=vk \
             --capabilities CAPABILITY_NAMED_IAM \
@@ -100,7 +99,6 @@ jobs:
             --template-body file://./aws_templates/ecs.yml \
             --parameters \
             ParameterKey=ClusterName,ParameterValue=abx \
-            ParameterKey=TaskDefinitionFamily,ParameterValue=vk_taskdef \
             ParameterKey=RoleName,ParameterValue=vk_ecs_role \
             ParameterKey=RepositoryName,ParameterValue=vk \
             --capabilities CAPABILITY_NAMED_IAM \
