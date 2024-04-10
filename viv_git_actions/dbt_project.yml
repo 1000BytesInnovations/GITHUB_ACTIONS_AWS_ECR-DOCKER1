@@ -34,6 +34,7 @@ models:
   json_datapipeline:
     staging:
       +materialized: table
-      +schema: STAGING_SCHEMA
+      +schema: silver
     refined:
       +materialized: table
+      +schema: gold

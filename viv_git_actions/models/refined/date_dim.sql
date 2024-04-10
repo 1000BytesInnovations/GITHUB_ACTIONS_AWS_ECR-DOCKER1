@@ -1,8 +1,8 @@
 {{
   config(
     post_hook=[
-      "ALTER TABLE date_dim ADD CONSTRAINT unique_constraintDD UNIQUE (time_id)",
-      "ALTER TABLE date_dim ADD CONSTRAINT primary_key_constraintDD PRIMARY KEY (time_id)"
+      "ALTER TABLE dbt_db.sf_gold.date_dim ADD CONSTRAINT unique_constraintDD UNIQUE (time_id)",
+      "ALTER TABLE dbt_db.sf_gold.date_dim ADD CONSTRAINT primary_key_constraintDD PRIMARY KEY (time_id)"
     ]
   )
 }}

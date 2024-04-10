@@ -1,10 +1,10 @@
 {{
   config(
-    post_hook=["ALTER TABLE passenger_fact ADD CONSTRAINT unique_constraint2 UNIQUE (ACTIVITY_PERIOD_ID,OPERATING_AIRLINE_IATA_CODE_ID,PUBLISHED_AIRLINE_IATA_CODE_ID,GEO_REGION_ID)",
-      "ALTER TABLE passenger_fact ADD CONSTRAINT fk_passenger1 FOREIGN KEY (ACTIVITY_PERIOD_ID) REFERENCES date_dim (time_id)",
-      "ALTER TABLE passenger_fact ADD CONSTRAINT fk_passenger2 FOREIGN KEY (OPERATING_AIRLINE_IATA_CODE_ID) REFERENCES airline_dim(airline_id)",
-      "ALTER TABLE passenger_fact ADD CONSTRAINT fk_passenger3 FOREIGN KEY (PUBLISHED_AIRLINE_IATA_CODE_ID) REFERENCES airline_dim(airline_id)",
-      "ALTER TABLE passenger_fact ADD CONSTRAINT fk_passenger4 FOREIGN KEY (GEO_REGION_ID) REFERENCES geography_dim (geo_id)"
+    post_hook=["ALTER TABLE dbt_db.sf_gold.passenger_fact ADD CONSTRAINT unique_constraint2 UNIQUE (ACTIVITY_PERIOD_ID,OPERATING_AIRLINE_IATA_CODE_ID,PUBLISHED_AIRLINE_IATA_CODE_ID,GEO_REGION_ID)",
+      "ALTER TABLE dbt_db.sf_gold.passenger_fact ADD CONSTRAINT fk_passenger1 FOREIGN KEY (ACTIVITY_PERIOD_ID) REFERENCES dbt_db.sf_gold.date_dim (time_id)",
+      "ALTER TABLE dbt_db.sf_gold.passenger_fact ADD CONSTRAINT fk_passenger2 FOREIGN KEY (OPERATING_AIRLINE_IATA_CODE_ID) REFERENCES dbt_db.sf_gold.airline_dim(airline_id)",
+      "ALTER TABLE dbt_db.sf_gold.passenger_fact ADD CONSTRAINT fk_passenger3 FOREIGN KEY (PUBLISHED_AIRLINE_IATA_CODE_ID) REFERENCES dbt_db.sf_gold.airline_dim(airline_id)",
+      "ALTER TABLE dbt_db.sf_gold.passenger_fact ADD CONSTRAINT fk_passenger4 FOREIGN KEY (GEO_REGION_ID) REFERENCES dbt_db.sf_gold.geography_dim (geo_id)"
     ]
   )
 }}

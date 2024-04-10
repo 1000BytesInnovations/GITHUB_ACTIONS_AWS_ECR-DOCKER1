@@ -1,10 +1,10 @@
 {{
   config(
-    post_hook=["ALTER TABLE cargo_fact ADD CONSTRAINT unique_constraint1 UNIQUE (ACTIVITY_PERIOD_ID,OPERATING_AIRLINE_IATA_CODE_ID,PUBLISHED_AIRLINE_IATA_CODE_ID,GEO_REGION_ID)",
-      "ALTER TABLE cargo_fact ADD CONSTRAINT fk_cargo6 FOREIGN KEY (ACTIVITY_PERIOD_ID) REFERENCES date_dim (time_id)",
-      "ALTER TABLE cargo_fact ADD CONSTRAINT fk_cargo2 FOREIGN KEY (OPERATING_AIRLINE_IATA_CODE_ID) REFERENCES airline_dim(airline_id)",
-      "ALTER TABLE cargo_fact ADD CONSTRAINT fk_cargo3 FOREIGN KEY (PUBLISHED_AIRLINE_IATA_CODE_ID) REFERENCES airline_dim(airline_id)",
-      "ALTER TABLE cargo_fact ADD CONSTRAINT fk_cargo4 FOREIGN KEY (GEO_REGION_ID) REFERENCES geography_dim (geo_id)"
+    post_hook=["ALTER TABLE dbt_db.sf_gold.cargo_fact ADD CONSTRAINT unique_constraint1 UNIQUE (ACTIVITY_PERIOD_ID,OPERATING_AIRLINE_IATA_CODE_ID,PUBLISHED_AIRLINE_IATA_CODE_ID,GEO_REGION_ID)",
+      "ALTER TABLE dbt_db.sf_gold.cargo_fact ADD CONSTRAINT fk_cargo6 FOREIGN KEY (ACTIVITY_PERIOD_ID) REFERENCES dbt_db.sf_gold.date_dim (time_id)",
+      "ALTER TABLE dbt_db.sf_gold.cargo_fact ADD CONSTRAINT fk_cargo2 FOREIGN KEY (OPERATING_AIRLINE_IATA_CODE_ID) REFERENCES dbt_db.sf_gold.airline_dim(airline_id)",
+      "ALTER TABLE dbt_db.sf_gold.cargo_fact ADD CONSTRAINT fk_cargo3 FOREIGN KEY (PUBLISHED_AIRLINE_IATA_CODE_ID) REFERENCES dbt_db.sf_gold.airline_dim(airline_id)",
+      "ALTER TABLE dbt_db.sf_gold.cargo_fact ADD CONSTRAINT fk_cargo4 FOREIGN KEY (GEO_REGION_ID) REFERENCES dbt_db.sf_gold.geography_dim (geo_id)"
     ]
   )
 }}

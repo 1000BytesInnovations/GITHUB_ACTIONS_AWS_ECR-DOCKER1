@@ -1,8 +1,8 @@
 {{
   config(
     post_hook=[
-      "ALTER TABLE geography_dim ADD CONSTRAINT unique_constraintGD UNIQUE (GEO_REGION)",
-      "ALTER TABLE geography_dim ADD CONSTRAINT primary_key_constraintGD PRIMARY KEY (geo_id)"
+      "ALTER TABLE dbt_db.sf_gold.geography_dim ADD CONSTRAINT unique_constraintGD UNIQUE (GEO_REGION)",
+      "ALTER TABLE dbt_db.sf_gold.geography_dim ADD CONSTRAINT primary_key_constraintGD PRIMARY KEY (geo_id)"
     ]
   )
 }}

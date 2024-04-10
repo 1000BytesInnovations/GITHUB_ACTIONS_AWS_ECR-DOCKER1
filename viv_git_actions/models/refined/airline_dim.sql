@@ -1,8 +1,8 @@
 {{
   config(
     post_hook=[
-      "ALTER TABLE airline_dim ADD CONSTRAINT unique_constraintAD UNIQUE (AIRLINE_IATA_CODE,START_DATE)",
-      "ALTER TABLE airline_dim ADD CONSTRAINT primary_key_constraintAD PRIMARY KEY (airline_id)"
+      "ALTER TABLE dbt_db.sf_gold.airline_dim ADD CONSTRAINT unique_constraintAD UNIQUE (AIRLINE_IATA_CODE,START_DATE)",
+      "ALTER TABLE dbt_db.sf_gold.airline_dim ADD CONSTRAINT primary_key_constraintAD PRIMARY KEY (airline_id)"
     ]
   )
 }}
