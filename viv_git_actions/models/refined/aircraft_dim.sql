@@ -1,8 +1,8 @@
 {{
   config(
     post_hook=[
-      "ALTER TABLE aircraft_dim ADD CONSTRAINT unique_constraintAC UNIQUE (AIRCRAFT_MODEL)",
-      "ALTER TABLE aircraft_dim ADD CONSTRAINT primary_key_constraintAC PRIMARY KEY (aircraft_id)"
+      "ALTER TABLE dbt_db.sf_gold.aircraft_dim ADD CONSTRAINT unique_constraintAC UNIQUE (AIRCRAFT_MODEL)",
+      "ALTER TABLE dbt_db.sf_gold.aircraft_dim ADD CONSTRAINT primary_key_constraintAC PRIMARY KEY (aircraft_id)"
     ]
   )
 }}
@@ -31,6 +31,3 @@ SELECT
     AIRCRAFT_MODEL,
     AIRCRAFT_BODY_TYPE
 FROM aircraft_dim_data
-
-
-
