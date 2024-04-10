@@ -1,4 +1,4 @@
-name: pusher
+name: workflow2
 
 on:
   pull_request:
